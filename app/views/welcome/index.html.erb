@@ -1,1 +1,10 @@
 <h1>Ear Buddies</h1>
+
+<% if current_user %>
+  <p>hello, <%= current_user.name %></p>
+<% else %>
+  <%= link_to "login", login_path %>
+<% end %>
+
+
+<%= link_to "logout", logout_path %>

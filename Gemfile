@@ -46,6 +46,10 @@ group :development, :test do
   gem 'capybara'
   gem 'simplecov', :require => false
   gem 'vcr'
+
+end
+
+group :test do
   gem 'webmock'
 end
 
