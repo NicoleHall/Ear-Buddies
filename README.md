@@ -6,7 +6,7 @@ EarBuddies allows users to create podcast playlists
 
 
 ### Problem
-Listening to a podcast is an easy and convienient way to get information or entertainment.
+Listening to a podcast is an easy and convenient way to get information or entertainment.
 But sorting by topic in iTunes is somewhat difficult
 
 ### Solution
