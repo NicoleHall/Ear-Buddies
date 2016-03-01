@@ -7,11 +7,18 @@ body {
   padding-top: 60px;
   background-image: url("headphonecat.jpg");
   background-size: cover;
-  display: block;
-      margin: auto;
+
 
 }
 
 .center {
   text-align: center;
+}
+
+.well {
+  width: 400px;
+  height: 200px;
+  display: block;
+     margin: auto;
+     margin-top: 150px;
 }

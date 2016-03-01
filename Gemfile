@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
+gem 'bootstrap-sass', '3.2.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -25,7 +26,7 @@ gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'figaro'
 gem 'faraday'
-gem 'bootstrap-sass', '3.2.0.0'
+
 
 
 # Use ActiveModel has_secure_password
