@@ -25,6 +25,7 @@ gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'figaro'
 gem 'faraday'
+gem 'bootstrap-sass', '3.2.0.0'
 
 
 # Use ActiveModel has_secure_password

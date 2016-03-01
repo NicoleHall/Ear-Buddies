@@ -7,3 +7,6 @@ test:
 development:
   consumer_api_key: 52GglzrtEIL82YNiFkDKwNSKR
   consumer_api_secret: Sg1gsKXx4dfg50zg0S8OGMG9aq8hrW9aObMO3480TGUEVmps2q
+
+production:
+  SECRET_KEY_BASE: 538521307d3367bab215d3e9a3480688320d8fb225e9a1ebe2e2a1feb28fadaabf7c5f043ce8554e05de3974f312e238d0066ed367a1e0e7288115ef6880e219

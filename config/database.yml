@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: ear_buddies_production
-  username: ear_buddies
-  password: <%= ENV['EAR_BUDDIES_DATABASE_PASSWORD'] %>
+  # username: ear_buddies
+  # password: <%= ENV['EAR_BUDDIES_DATABASE_PASSWORD'] %>
