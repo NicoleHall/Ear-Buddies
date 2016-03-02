@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get '/auth/twitter/callback', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy'
 
+    resources :podcasts_finder
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

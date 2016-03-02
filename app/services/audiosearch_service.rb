@@ -16,7 +16,10 @@ class AudiosearchService
    end
 
   def search_by_query(query)
-    client.search({ q: "#{query}" })
+    response = client.search({ q: "#{query}" })
+    response.results.each do |episode|
+      episode.title
+    end
   end
 
 end

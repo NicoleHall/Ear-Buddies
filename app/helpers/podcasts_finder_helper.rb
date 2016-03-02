@@ -1,0 +1,2 @@
+module PodcastsFinderHelper
+end
