@@ -15,6 +15,7 @@
         null,
         null,
         2,
+        2,
         null,
         null
       ],
@@ -65,8 +66,32 @@
         null,
         null,
         null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/services/audiosearch_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
       ]
     },
-    "timestamp": 1456796269
+    "timestamp": 1456884618
   }
 }
