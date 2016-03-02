@@ -7,9 +7,11 @@ Rails.application.routes.draw do
     get '/auth/twitter', as: 'login'
     get '/auth/twitter/callback', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy'
-    get 'podcasts_finder/search', to: 'podcasts_finder'
+    get 'podcasts/search', to: 'podcasts#search'
+    post 'podcasts/search_result', to: 'podcasts#search_result'
 
     resources :podcasts_finder
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PodcastsFinderControllerTest < ActionController::TestCase
+class PodcastsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

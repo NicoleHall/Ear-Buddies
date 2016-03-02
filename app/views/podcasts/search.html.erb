@@ -1,6 +1,6 @@
 <div class="container">
   <div class="well center funfont">
-    <%= form_for @podcast_subject, :url => url_for(:controller => 'podcasts_finder', :action => 'index') do |f| %>
+    <%= form_for :podcast_subject, :url => url_for(:controller => 'podcasts', :action => 'search_result') do |f| %>
     <h2 class="funfont"><%= f.label :What_Subject_Would_You_Like_To_Search %></h2>
     <%= f.text_field :subject %>
     <%= f.submit "Search" %>
