@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get '/auth/twitter', as: 'login'
     get '/auth/twitter/callback', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy'
+    get 'podcasts_finder/search', to: 'podcasts_finder'
 
     resources :podcasts_finder
 

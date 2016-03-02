@@ -1,11 +1,12 @@
 @import "bootstrap-sprockets";
-
 @import "bootstrap";
+
 /* universal */
 
 body {
   padding-top: 60px;
-  background-image: url("headphonecat.jpg");
+
+  background-image: url('headphonecat.jpg');
   background-size: cover;
 
 

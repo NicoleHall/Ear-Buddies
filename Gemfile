@@ -26,7 +26,7 @@ gem 'responders'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'figaro'
 gem 'faraday'
-gem 'rails_12factor'
+
 gem 'audiosearch'
 
 
@@ -54,6 +54,10 @@ end
 
 group :test do
   gem 'webmock'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
 group :development do
