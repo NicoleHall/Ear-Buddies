@@ -92,6 +92,101 @@
         0
       ]
     },
-    "timestamp": 1456884618
+    "timestamp": 1456884959
+  },
+  "Integration Tests": {
+    "coverage": {
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/models/user.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/controllers/welcome_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/FatMac/turing/module3dot2/projects/ear_buddies/app/services/audiosearch_service.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "timestamp": 1456884925
   }
 }
