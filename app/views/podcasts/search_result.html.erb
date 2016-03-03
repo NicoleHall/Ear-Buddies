@@ -2,11 +2,36 @@
   <div class="newbox">
 
 
-    <div class="center">
+
       <% @results.each do |result| %>
-      <%= result[:ep_title]%>
-      <hr />
+      <div class="card">
+        <div class="card-block">
+          <h3 class="card-title"><%= result[:ep_title]%></h4>
+          <h6 class="card-subtitle text-muted">Podcast Publisher: <%= result[:show_title]%><br></h6>
+        </div>
+        <p class="card-text">Description <%= result[:description].first(140)%></p>
+        <img src=<%=result[:image]%> alt="Card image">
+        <div class="card-block">
+
+          <a href="#" class="card-link">Add To Playlist</a>
+          <hr>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <% end %>
-    </div>
+
   </div>
 </div>
