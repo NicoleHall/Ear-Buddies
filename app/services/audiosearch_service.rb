@@ -17,9 +17,29 @@ class AudiosearchService
 
   def search_by_query(query)
     response = client.search({ q: "#{query}" })
+    episodes = []
+
     response.results.each do |episode|
-      episode.title
+
+     episodes << {
+        ep_title: episode["title"],
+        description: episode["description"],
+        date_created_at: episode["date_created"],
+        show_title: episode["show_title"],
+        url: episode["audio_files"] ? episode['audio_files'][0]["mp3"] : nil,
+        image: episode["image_urls"] ? episode["image_urls"]["thumb"] : nil,
+        subject: "#{query}"
+      }
+
     end
+    episodes
   end
 
 end
+
+
+#learned this syntax from will
+#if stuff on left side of questin mark evaluates to true,
+#then execute code on the right side of the ? before the colon
+#if stuff on left side of questin mark evaluates to false,
+#set the value of the key to nil

@@ -1,5 +1,12 @@
 <div class="container">
-  <div class="center funfont">
-<%= @results %>
-</div>
+  <div class="newbox">
+
+
+    <div class="center">
+      <% @results.each do |result| %>
+      <%= result %>
+      <hr />
+      <% end %>
+    </div>
+  </div>
 </div>

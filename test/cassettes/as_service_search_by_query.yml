@@ -23,7 +23,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Wed, 02 Mar 2016 20:21:02 GMT
+      - Thu, 03 Mar 2016 00:17:55 GMT
       Status:
       - 200 OK
       X-Frame-Options:
@@ -35,18 +35,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3e98dfe334ae91b2a2cbfa383e0e3acd"
+      - W/"d3ec96d545d430b61460db9e6d04d640"
       X-Request-Id:
-      - 48a003f9-3b8e-4fbb-8023-70a8dacdd7c5
+      - 5133a95e-4172-4911-9ee0-e8d0731060cc
       X-Runtime:
-      - '0.227546'
+      - '0.124931'
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"access_token":"7276e58f4121a15e75749e1215834b85f34295d28b23fe36563530e55f9714e9","token_type":"bearer"}'
+      string: '{"access_token":"c02dc9c9c477732259c332be194e7ffdf41ea8d2e678b79708144bc6583411ed","token_type":"bearer"}'
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 20:21:02 GMT
+  recorded_at: Thu, 03 Mar 2016 00:17:55 GMT
 - request:
     method: get
     uri: https://www.audiosear.ch/api/search/episodes?q=food
@@ -61,7 +61,7 @@ http_interactions:
       Cookie:
       - ''
       Authorization:
-      - Bearer 7276e58f4121a15e75749e1215834b85f34295d28b23fe36563530e55f9714e9
+      - Bearer c02dc9c9c477732259c332be194e7ffdf41ea8d2e678b79708144bc6583411ed
   response:
     status:
       code: 200
@@ -72,7 +72,7 @@ http_interactions:
       Connection:
       - close
       Date:
-      - Wed, 02 Mar 2016 20:21:04 GMT
+      - Thu, 03 Mar 2016 00:17:56 GMT
       Status:
       - 200 OK
       X-Frame-Options:
@@ -86,12 +86,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _audiosearch_session=L2xHY3MxZ1BnaUxtZ2JaYjZiUTlWaVZtaGRSSm1GekNjMEVZNytJNU13ZTBmRjJYUkxDOURBTjBqZ2tMdFpjeXUrQzZucFJ2dXNlblMvdUZHbzFRaTRNTExWK2Y1SlVyb2JQRitFMEtoRnRCK1FOV1AvQ0tWcVhqVDJKZkJ6UGhoRU9tZGhVdG03ZEQ1dGcrZzJjT0J3PT0tLWtIRVp6WTVuVElDbnFyYUk1a0JSNXc9PQ%3D%3D--260124159704a324660991511aea3d60aa8cae31;
+      - _audiosearch_session=enl2dHRsS1d0bDJ2NFREN1dZUDZLZ3J3OVFKM240UkkxZnFiRlJuc1NDdmJEeEFEWFJKTGVMK3ZHSkp1Nmc5clpKSWoyL3ovY3gxQzBRb2JsSGFYdzl6RkVjTlJxWmFBN2VpS2pNbzdZUDJ0ejZySzhSc2E2Z1hPVU9jQ25NV1Nxa2tXajFLYUtXZWZYZHpIYkxHQmpRPT0tLWhUeWY5UlV4ZzV1R2ZWa2xjNjk5d0E9PQ%3D%3D--2fb9ed4eb7b1883ee4791926fc71ec49855e4334;
         path=/; HttpOnly
       X-Request-Id:
-      - de5944b1-5d15-4634-88ba-47666c34aa6c
+      - 4dea9a8f-d7aa-498f-97c0-97d65ee9121e
       X-Runtime:
-      - '1.347884'
+      - '1.208390'
       Via:
       - 1.1 vegur
     body:
@@ -4363,5 +4363,5 @@ http_interactions:
         eSBjYXQgaW4gU2FudGEgQmFyYmFyYSBvbiBTdW5kYXkgTm92ZW1iZXIgc2l4
         dGVlbnRoLiBJIGp1c3Qgb24gdGhlIG1lbnUgYW5kIGl0In1dXX1dfQ==
     http_version: 
-  recorded_at: Wed, 02 Mar 2016 20:21:04 GMT
+  recorded_at: Thu, 03 Mar 2016 00:17:57 GMT
 recorded_with: VCR 3.0.1
