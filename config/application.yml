@@ -16,7 +16,7 @@ development:
 
 production:
   consumer_api_key: 8mDGqF8LKWXjUBj8SN0qReL5O
-  consumer_api_secret: 	DqGiUto3yG77wJtJp8A062ZKSWm24NMMQja45yasvRoq37QvZh
+  consumer_api_secret: DqGiUto3yG77wJtJp8A062ZKSWm24NMMQja45yasvRoq37QvZh
   oauth_token: 250190173-KWv3EEw0LcKe3rJ9gMfs9yFT7JzYE804BR6CgrL7
   oauth_token_secret: nzbHASC5gZxmuv0W10I44oRQUfC7oP2utqK0xbr2ZlKkS
   SECRET_KEY_BASE: 538521307d3367bab215d3e9a3480688320d8fb225e9a1ebe2e2a1feb28fadaabf7c5f043ce8554e05de3974f312e238d0066ed367a1e0e7288115ef6880e219
