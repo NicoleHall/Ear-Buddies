@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160303231849) do
+ActiveRecord::Schema.define(version: 20160304204012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,12 +19,10 @@ ActiveRecord::Schema.define(version: 20160303231849) do
   create_table "playlists", force: :cascade do |t|
     t.string   "subject"
     t.integer  "user_id"
-    t.integer  "podcast_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "playlists", ["podcast_id"], name: "index_playlists_on_podcast_id", using: :btree
   add_index "playlists", ["user_id"], name: "index_playlists_on_user_id", using: :btree
 
   create_table "podcasts", force: :cascade do |t|
@@ -37,7 +35,10 @@ ActiveRecord::Schema.define(version: 20160303231849) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "subject"
+    t.integer  "playlist_id"
   end
+
+  add_index "podcasts", ["playlist_id"], name: "index_podcasts_on_playlist_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -50,6 +51,5 @@ ActiveRecord::Schema.define(version: 20160303231849) do
     t.datetime "updated_at",         null: false
   end
 
-  add_foreign_key "playlists", "podcasts"
   add_foreign_key "playlists", "users"
 end

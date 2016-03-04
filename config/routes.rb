@@ -8,13 +8,22 @@ Rails.application.routes.draw do
     get '/auth/twitter/callback', to: 'sessions#create'
     get 'logout', to: 'sessions#destroy'
     get 'podcasts/search', to: 'podcasts#search'
+    # get 'podcasts/edit', to: 'podcasts#edit'
+    # post 'podcasts/create', to: 'podcasts#create'
     post 'podcasts/search_result', to: 'podcasts#search_result'
 
-    resources :playlists, only: [:new, :create]
+    resources :playlists
 
-    resources :users do
-      resources :playlists
+    resources :playlist do
+      resources :podcast, only: [:create]
+#the add to playlist button will go here
+#but a current playlist method would be needed
     end
+
+    #or add to playlist would go to non-nested podcast new
+    #then go to new form
+    #that has dropdown of all current playlists
+    #then you take the podcast Id with the params
 
 
   # Example of regular route:
