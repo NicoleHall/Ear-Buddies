@@ -10,7 +10,11 @@ Rails.application.routes.draw do
     get 'podcasts/search', to: 'podcasts#search'
     post 'podcasts/search_result', to: 'podcasts#search_result'
 
-    resources :podcasts_finder
+    resources :playlists, only: [:new, :create]
+
+    resources :users do
+      resources :playlists
+    end
 
 
   # Example of regular route:
