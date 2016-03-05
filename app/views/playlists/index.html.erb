@@ -1,3 +1,7 @@
-<% @playlists.each do |pl| %>
-<%= pl.subject %><br>
-<% end %>
+<div class="container">
+  <div class="newbox">
+    <% @playlists.each do |pl| %>
+      <%= link_to "#{pl.subject}", {:controller => "playlists", :action => "selector", :playlist => pl.id } %><br>
+    <% end %>
+  </div>
+</div>

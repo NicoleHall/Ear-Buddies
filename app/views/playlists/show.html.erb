@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="newbox">
+    <% @playlist.podcasts.each do |podcast| %>
+
+    <%= podcast.ep_title %><br>
+    <%= podcast.url %><br>
+    <%= link_to "Remove Podcast From Playlist", podcast_path(podcast.id), :action => :destroy %><br>
+
+    <% end %>
+  </div>
+</div>

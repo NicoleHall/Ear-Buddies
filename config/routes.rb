@@ -11,14 +11,13 @@ Rails.application.routes.draw do
     # get 'podcasts/edit', to: 'podcasts#edit'
     # post 'podcasts/create', to: 'podcasts#create'
     post 'podcasts/search_result', to: 'podcasts#search_result'
+    get 'podcasts/search_result', to: 'podcasts#search_result'
+    get 'playlists/selector', to: 'playlists#selector'
+
+    resources :podcasts, only: [:new, :create, :destroy, :show]
 
     resources :playlists
 
-    resources :playlist do
-      resources :podcast, only: [:create]
-#the add to playlist button will go here
-#but a current playlist method would be needed
-    end
 
     #or add to playlist would go to non-nested podcast new
     #then go to new form
