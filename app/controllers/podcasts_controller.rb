@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-  before_action :set_playlist, only:[:search_result, :new]
+  before_action :set_playlist, only:[:search_result, :new, :destroy]
   before_action :store_query, only:[:search_result]
 
   def search
@@ -8,8 +8,9 @@ class PodcastsController < ApplicationController
 
   def search_result
     # session[:subject] = params["podcast_subject"]["subject"]
-    @results = AudiosearchService.new.search_by_query(session[:subject])
+    @results = AudiosearchService.new.search_by_query(params["podcast_subject"]["subject"])
   end
+
 
   def new
     # args = {}.merge(params).merge
@@ -29,8 +30,9 @@ class PodcastsController < ApplicationController
   end
 
   def destroy
-    Podcast.delete(id: params["id"])
-    redirect_to playlist_path(@podcast.playlist)
+    playlist_id = Playlist.find(session[:playlist]["id"]).id
+    Podcast.delete(params["id"])
+    redirect_to playlist_path(playlist_id)
   end
 
   private
