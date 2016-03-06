@@ -6,6 +6,7 @@
     <%= podcast.ep_title %><br>
     <%= podcast.url %><br>
     <%= button_to "Remove Podcast From Playlist", podcast_path(podcast.id), method: :delete, data: { confirm: 'Are you sure?' }  %><br>
+    <%= link_to "HTML5 Audio", podcast.url, :class => "html5" %>
 
     <% end %>
     <%= link_to "Search Again", podcasts_search_path, class: "btn btn-primary" %>

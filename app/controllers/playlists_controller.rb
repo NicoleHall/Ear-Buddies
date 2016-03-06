@@ -1,6 +1,6 @@
 class PlaylistsController < ApplicationController
   #before_action :selector, except: :show, except: :new, except: :create
-  before_action :selector, only: [:edit]
+  before_action :selector, only: [:edit, :show]  
 
   def index
     @playlists = current_user.playlists

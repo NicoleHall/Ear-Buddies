@@ -40,7 +40,7 @@ class PodcastsController < ApplicationController
 
   private
   def set_playlist
-    @playlist = Playlist.find(session[:playlist]["id"]) if session[:playlist]
+    @playlist ||= Playlist.find(session[:playlist]["id"]) if session[:playlist]
     @playlist ||= "No playlist"
   end
 
