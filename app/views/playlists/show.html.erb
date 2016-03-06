@@ -8,5 +8,6 @@
     <%= button_to "Remove Podcast From Playlist", podcast_path(podcast.id), method: :delete %><br>
 
     <% end %>
+    <%= link_to "Search Again", podcasts_search_path, class: "btn btn-primary" %>
   </div>
 </div>
