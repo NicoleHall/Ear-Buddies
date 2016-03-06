@@ -2,10 +2,9 @@
 
 one:
   subject: MyString
-  user_id: 
-  podcast_id: 
+  user_id:
+ 
 
 two:
   subject: MyString
-  user_id: 
-  podcast_id: 
+  user_id:
