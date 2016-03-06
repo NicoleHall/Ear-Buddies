@@ -23,7 +23,7 @@ class AudiosearchService
 
      episodes << {
         ep_title: episode["title"],
-        description: episode["description"],
+        description: episode["description"] ? episode["description"] : nil,
         date_created_at: episode["date_created"],
         show_title: episode["show_title"],
         url: episode["audio_files"] ? episode['audio_files'][0]["mp3"] : nil,
@@ -38,7 +38,7 @@ class AudiosearchService
 end
 
 
-#learned this syntax from will
+#learned about safe navigation operator from will
 #if stuff on left side of questin mark evaluates to true,
 #then execute code on the right side of the ? before the colon
 #if stuff on left side of questin mark evaluates to false,

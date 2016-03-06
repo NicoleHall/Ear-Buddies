@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+  has_many :playlists
+  has_many :podcasts, through: :playlists
+
   def self.from_omniauth(auth_info)
    user = find_or_create_by(uid: auth_info.uid)
 
