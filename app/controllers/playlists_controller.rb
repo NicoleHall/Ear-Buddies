@@ -1,5 +1,7 @@
 class PlaylistsController < ApplicationController
-  before_action :selector, except: :show
+  #before_action :selector, except: :show, except: :new, except: :create
+  before_action :selector, only: [:edit]
+
   def index
     @playlists = current_user.playlists
   end
@@ -10,6 +12,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.create(subject: params["playlist"]["subject"], user_id: current_user.id)
+  
     redirect_to playlists_path
   end
 
@@ -17,10 +20,10 @@ class PlaylistsController < ApplicationController
   end
 
   def show
-      
     @playlist = Playlist.find(params["id"])
   end
 
+private
   def selector
     playlist = Playlist.find(params[:id])
     session[:playlist] = playlist

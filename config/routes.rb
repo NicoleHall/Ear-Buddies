@@ -18,7 +18,6 @@ Rails.application.routes.draw do
 
     resources :playlists
 
-
     #or add to playlist would go to non-nested podcast new
     #then go to new form
     #that has dropdown of all current playlists
