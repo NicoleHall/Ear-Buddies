@@ -12,7 +12,7 @@ class PlaylistsController < ApplicationController
 
   def create
     @playlist = Playlist.create(subject: params["playlist"]["subject"], user_id: current_user.id)
-  
+
     redirect_to playlists_path
   end
 
@@ -21,6 +21,11 @@ class PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.find(params["id"])
+  end
+
+  def destroy
+    Playlist.delete(params[:id])
+    redirect_to playlists_path
   end
 
 private
