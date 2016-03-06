@@ -1,4 +1,5 @@
 class PlaylistsController < ApplicationController
+  before_action :selector, except: :show
   def index
     @playlists = current_user.playlists
   end
@@ -16,13 +17,18 @@ class PlaylistsController < ApplicationController
   end
 
   def show
+      
     @playlist = Playlist.find(params["id"])
   end
 
   def selector
-    playlist = Playlist.find(params[:playlist])
+    playlist = Playlist.find(params[:id])
     session[:playlist] = playlist
+    if playlist.podcasts == []
+      redirect_to podcasts_search_path
+    else
     redirect_to :controller=>'podcasts',:action=>'search_result'
     # redirect_to podcasts_search_result_path, action: 'POST'
+    end
   end
 end

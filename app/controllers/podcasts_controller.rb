@@ -17,6 +17,7 @@ class PodcastsController < ApplicationController
     @podcast = Podcast.create_podcast_on_a_playlist(params.merge({
       playlist_id: @playlist.id}))
     if @podcast.save
+    
       redirect_to playlist_path(@podcast.playlist)
     else
       flash[:notice] = "Fail Whale"
@@ -25,9 +26,9 @@ class PodcastsController < ApplicationController
 
   def create
   end
-
-  def show
-  end
+  #
+  # def show
+  # end
 
   def destroy
     playlist_id = Playlist.find(session[:playlist]["id"]).id
