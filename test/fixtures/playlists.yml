@@ -1,10 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  subject: MyString
-  user_id:
- 
+  id: 22
+  subject: arts and culture
+  user_id: 1
+
 
 two:
-  subject: MyString
-  user_id:
+  id: 45
+  subject: hotdogs
+  user_id: 1

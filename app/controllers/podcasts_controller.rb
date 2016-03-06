@@ -1,5 +1,5 @@
 class PodcastsController < ApplicationController
-  before_action :set_playlist, only:[:search_result, :new, :destroy]
+  before_action :set_playlist, only:[:new, :destroy] #only:[:search_result, :new, :destroy]
   before_action :store_query, only:[:search_result]
 
 
