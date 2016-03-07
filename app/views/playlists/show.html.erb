@@ -3,7 +3,7 @@
   <div class="newbox">
     <% @playlist.podcasts.each do |podcast| %>
 
-    <h2 class="funfont center"><%= podcast.ep_title %></h2> <br>
+    <h2 class="funfont center"><%= podcast.ep_title %> <br> From: <%= podcast.show_title %></h2>
     <h3 class="funfont center"><%= link_to "Listen Now", podcast.url, :class => "html5" %> </h3>
     <div class="center"><%= button_to "Remove Podcast From Playlist", podcast_path(podcast.id), method: :delete, class: "btn btn-secondary", data: { confirm: 'Are you sure?' }  %></div>
 
