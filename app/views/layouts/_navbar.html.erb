@@ -1,0 +1,12 @@
+<nav class="col-md-12 navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Ear Buddies</a>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "All Your Playlists", playlists_path %></li>
+      <li><%= link_to "Your Current Playlist is #{@playlist.subject}", playlists_path unless @playlist == nil%></li>
+      <li><%= link_to "Select a different playlist", playlists_path %></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

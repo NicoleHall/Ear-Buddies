@@ -1,25 +1,3 @@
-<nav class="col-md-12 navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Ear Buddies</a>
-    <ul class="nav navbar-nav">
-      <li><%= link_to "All Your Playlists", playlists_path %></li>
-      <li><%= link_to "Your Current Playlist is #{@playlist.subject}", playlists_path unless @playlist == nil%></li>
-      <li><%= link_to "Select a different playlist", playlists_path %></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-        aria-haspopup="true" aria-expanded="false">Categories<span class="caret">
-        </span>
-        </a>
-        <ul class="dropdown-menu">
-          <% current_user.playlists.each do |playlist| %>
-          <li><a href="#"><%= playlist.subject %></a></li>
-          <% end %>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-
 <div class="container">
   <div class="newbox">
 
