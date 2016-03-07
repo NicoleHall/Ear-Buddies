@@ -1,0 +1,13 @@
+<%= render :partial => "layouts/navbar" %>
+<div class="container">
+  <div class="newbox">
+    <% @playlist.podcasts.each do |podcast| %>
+
+    <%= podcast.ep_title %><br>
+    <%= podcast.url %><br>
+    <%= button_to "Remove Podcast From Playlist", podcast_path(podcast.id), method: :delete, data: { confirm: 'Are you sure?' }  %>
+    <%= link_to "Listen Now", podcast.url, :class => "html5" %><br>
+    <% end %>
+    <%= link_to "Search Again", podcasts_search_path, class: "btn btn-primary" %>
+  </div>
+</div>

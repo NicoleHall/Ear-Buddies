@@ -11,5 +11,4 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
     assert page.has_link?("Logout")
   end
 
-
 end

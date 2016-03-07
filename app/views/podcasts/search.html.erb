@@ -1,3 +1,5 @@
+<%= render :partial => "layouts/navbar" %>
+
 <div class="container">
   <div class="well center funfont">
     <%= form_for :podcast_subject, :url => url_for(:controller => 'podcasts', :action => 'search_result') do |f| %>
