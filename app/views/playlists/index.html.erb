@@ -4,8 +4,6 @@
       <%= link_to "#{playlist.subject}", playlist_path(playlist) %>
       <%= button_to "Delete This Playlist", playlist_path(playlist.id), method: :delete, data: { confirm: 'Are you sure?' }  %><br>
     <% end %>
+    <%= link_to "Search", podcasts_search_path, class: "btn btn-primary"%>
   </div>
 </div>
-
-
-<!-- {:controller => "playlists", :action => "selector", :playlist => playlist.id } -->
