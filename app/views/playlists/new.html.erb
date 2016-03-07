@@ -1,5 +1,13 @@
-<%= form_for @playlist do |f| %>
-<%= f.label :playlist_name %>
-<%= f.text_field :subject %>
-<%= f.submit("Create Your Playlist") %>
+<%= render :partial => "layouts/navbar" %>
+
+
+  <div class="boxed">
+
+<%= form_for @playlist do |f| %></h2>
+<h1 class="funfont center"><%= f.label :playlist_name %></h1>
+<h3 class="funfont center"><%= f.text_field :subject %></h3>
+<h3 class="funfont center"><%= f.submit("Create Your Playlist") %></h3>
 <% end %>
+
+</div>
+</div>
