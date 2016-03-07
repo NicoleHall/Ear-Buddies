@@ -50,3 +50,26 @@ body {
      margin: auto;
   margin-top: 50px
 }
+
+.longboxed {
+  background-color: white;
+  width: 400px;
+  min-height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  border: 1px solid gray ;
+  display: block;
+     margin: auto;
+  margin-top: 50px
+}
+
+.box-centerside  {
+      margin: auto;
+      background-color: white;
+      float:left;
+      min-height:100px;
+      width:260px;
+      padding: 10px;
+      border: 1px solid gray ;
+      margin-top: 50px;
+    }
