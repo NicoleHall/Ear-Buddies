@@ -1,6 +1,10 @@
 <%= render :partial => "layouts/navbar" %>
 <div class="container">
   <div class="newbox">
+    <h1 class="funfont center"><%= @playlist.subject%></h1>
+    <% if @playlist.podcasts == [] %>
+    <h3><div class="center"><%= button_to "Search For Something Good", podcasts_search_path, class: "btn btn-primary"%></h3>
+    <% else %>
     <% @playlist.podcasts.each do |podcast| %>
 
     <h2 class="funfont center"><%= podcast.ep_title %> <br> From: <%= podcast.show_title %></h2>
@@ -8,6 +12,7 @@
     <div class="center"><%= button_to "Remove Podcast From Playlist", podcast_path(podcast.id), method: :delete, class: "btn btn-secondary", data: { confirm: 'Are you sure?' }  %></div>
 
     <hr>
+    <% end %>
     <% end %>
 
   </div>
