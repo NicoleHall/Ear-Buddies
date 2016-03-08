@@ -6,6 +6,7 @@
       <li><%= link_to "Your Current Playlist is #{current_playlist.subject}", playlists_path unless current_playlist == nil %></li>
       <li><%= link_to "Search", podcasts_search_path %></li>
       <li><%= link_to "Create Playlist", new_playlist_path %></li>
+      <li><%= link_to "Your Profile", user_profile_path %></li>
       <li><%= link_to "Logout", logout_path%></li>
         </ul>
       </li>

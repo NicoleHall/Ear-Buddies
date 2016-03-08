@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     get 'podcasts/search_result', to: 'podcasts#search_result'
     get 'playlists/selector', to: 'playlists#selector'
 
+    get 'user/profile', to: 'users#show'
+
     resources :podcasts, only: [:new, :create, :destroy, :show]
 
     resources :playlists
