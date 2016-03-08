@@ -9,3 +9,8 @@ two:
   id: 45
   subject: hotdogs
   user_id: 1
+
+three:
+  id: 1000
+  subject: fashion
+  user_id: 1
