@@ -25,6 +25,11 @@ class PodcastsController < ApplicationController
     end
   end
 
+  def show
+    @podcast = Podcast.find(params["id"])
+    @related = AudiosearchService.new.search_by_related(@podcast.audiosearch_id)
+  end
+
   def create
   end
   #

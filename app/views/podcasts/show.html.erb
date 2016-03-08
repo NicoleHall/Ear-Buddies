@@ -1,1 +1,17 @@
 <%= render :partial => "layouts/navbar" %>
+<div class="container">
+  <div class="newbox">
+<%= @podcast.ep_title %>
+<%= @podcast.description.html_safe %>
+<img src=<%= @podcast.image %>><br><br><br>
+
+<% @related.each do |related_podcast| %>
+<%= related_podcast[:ep_title] %>
+<%= link_to "Add To Playlist",
+new_podcast_path(related_podcast),
+class: "btn btn-primary" %><br>
+
+<% end %>
+
+  </div>
+</div>

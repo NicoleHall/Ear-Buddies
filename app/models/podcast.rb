@@ -3,6 +3,7 @@ class Podcast < ActiveRecord::Base
 
   def self.create_podcast_on_a_playlist(params)
     podcast = self.new({
+      audiosearch_id: params["audiosearch_id"],
       ep_title: params["ep_title"],
       description: params["description"],
       date_created_at: params["date_created_at"],

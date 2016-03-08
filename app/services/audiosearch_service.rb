@@ -22,6 +22,7 @@ class AudiosearchService
     response.results.each do |episode|
 
      episodes << {
+        audiosearch_id: episode["id"],
         ep_title: episode["title"],
         description: episode["description"] ? episode["description"] : nil,
         date_created_at: episode["date_created"],
@@ -31,6 +32,27 @@ class AudiosearchService
         subject: "#{query}"
       }
 
+    end
+    episodes
+  end
+
+  def search_by_related(podcast_audiosearch_id)
+    related = client.get_related(podcast_audiosearch_id, {size: 4, from: 1})
+
+    episodes = []
+
+
+    related.each do |episode|
+
+     episodes << {
+        audiosearch_id: episode["id"],
+        ep_title: episode["title"],
+        description: episode["description"] ? episode["description"] : nil,
+        date_created_at: episode["date_created"],
+        show_title: episode["show_title"],
+        url: episode["audio_files"] ? episode['audio_files'][0]["mp3"] : nil,
+        image: episode["image_urls"] ? episode["image_urls"]["thumb"] : nil
+      }
     end
     episodes
   end
