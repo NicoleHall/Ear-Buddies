@@ -8,7 +8,9 @@ class PodcastsControllerTest < ActionController::TestCase
 
   test "#new saves a selected podcast to database" do
     assert_difference 'Podcast.count', 1 do
-    session[:playlist] = podcasts(:two)
+      user = users(:one)
+      session[:user_id] = user.id
+    session[:playlist] = playlists(:two)
     podcast = { ep_title: "New Episode",
       description: "Something",
       date_created_at: "2015-04-14",

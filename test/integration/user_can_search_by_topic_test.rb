@@ -2,9 +2,7 @@ require 'test_helper'
 
 class UserCanSearchByTopicTest < ActionDispatch::IntegrationTest
   test "user can search podcast by topic" do
-
     visit "/"
-
     click_link "Login"
     click_link "Create A Playlist"
     fill_in("playlist[subject]", with: "dogs")
