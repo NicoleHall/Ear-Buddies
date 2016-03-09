@@ -12,6 +12,7 @@ class PlaylistsController < ApplicationController
   end
 
   def new
+
     @playlist = Playlist.new
   end
 
@@ -31,6 +32,6 @@ class PlaylistsController < ApplicationController
 
   def destroy
     Playlist.delete(params[:id])
-    redirect_to playlists_path
+    redirect_to new_playlist_path
   end
 end

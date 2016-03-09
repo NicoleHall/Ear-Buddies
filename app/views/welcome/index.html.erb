@@ -1,7 +1,7 @@
 <div class="container">
   <div class="well center">
 <h1 class="funfont">Ear Buddies</h1>
-<p >hello, <%= current_user.name if current_user%></p>
+<h4>Hello <%= current_user.name if current_user%></h4>
 
 <% if current_user && current_user.playlists != [] %>
 
