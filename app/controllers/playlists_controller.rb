@@ -32,6 +32,7 @@ class PlaylistsController < ApplicationController
 
   def destroy
     Playlist.delete(params[:id])
+    session[:playlist] = nil
     redirect_to new_playlist_path
   end
 end
