@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
   end
 
   def current_playlist
-    @playlist = Playlist.find(session[:playlist]["id"]) if session[:playlist]
-  end
-
-  def is_there_a_playlist?
-    true unless current_user.playlists == []
+    if session[:playlist]
+      @playlist = Playlist.find(session[:playlist]["id"])
+    elsif current_user && current_user.playlists.count == 1
+      @playlist = current_user.playlists.first
+    end
   end
 
 end

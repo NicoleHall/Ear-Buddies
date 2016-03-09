@@ -2,14 +2,16 @@ require 'test_helper'
 
 class PodcastsControllerTest < ActionController::TestCase
   test "#search" do
+    user = users(:one)
+    session[:user_id] = user.id
     get :search
     assert_response :success
   end
 
   test "#new saves a selected podcast to database" do
     assert_difference 'Podcast.count', 1 do
-      user = users(:one)
-      session[:user_id] = user.id
+    user = users(:one)
+    session[:user_id] = user.id
     session[:playlist] = playlists(:two)
     podcast = { ep_title: "New Episode",
       description: "Something",

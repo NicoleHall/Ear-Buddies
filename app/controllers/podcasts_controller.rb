@@ -2,25 +2,29 @@ class PodcastsController < ApplicationController
   before_action :store_query, only:[:search_result]
 
   def search
+   
   end
 
   def search_result
+
     @results = AudiosearchService.new.search_by_query(params["podcast_subject"]["subject"])
   end
 
-def new
-  if is_there_a_playlist?
-    @podcast = Podcast.create_podcast_on_a_playlist(params.merge({
-      playlist_id: current_playlist.id}))
-    if @podcast.save
-      redirect_to playlist_path(@podcast.playlist)
+  def new
+    if current_user.playlists.empty?
+      flash[:notice] = "Create A Playlist!"
+      redirect_to new_playlist_path
     else
-      flash[:notice] = "Fail Whale"
+      @podcast = Podcast.create_podcast_on_a_playlist(params.merge({
+        playlist_id: current_playlist.id}))
+      if @podcast.save
+        redirect_to playlist_path(@podcast.playlist)
+      else
+        flash[:notice] = "Fail Whale!"
+        redirect_to new_playlist_path
+      end
     end
-  else
-    redirect_to new_playlist_path
-  end     
-end
+  end
 
   def show
     @podcast = Podcast.find(params["id"])

@@ -1,10 +1,13 @@
 class PlaylistsController < ApplicationController
 
   def index
-    if is_there_a_playlist?
-      @playlists = current_user.playlists
-    else
+
+    if current_user.playlists.empty?
+      flash[:notice] = "Create a Playlist!"
       redirect_to new_playlist_path
+
+    else
+      @playlists = current_user.playlists
     end
   end
 
