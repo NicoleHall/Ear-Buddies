@@ -1,6 +1,7 @@
 <%= render :partial => "layouts/navbar" %>
 
 <div class="longboxed">
+  <h1 class="funfont center"><font color="C71585"><%= current_user.name%>'s Playlists:</h1><br>
   <% @playlists.each do |playlist| %>
   <h2 class="funfont center"><%= link_to "#{playlist.subject}", playlist_path(playlist) %></h2>
   <div class="center"><%= button_to "Delete This Playlist", playlist_path(playlist.id), method: :delete, class: "btn btn-primary", data: { confirm: 'Are you sure?' }  %><br></div>
