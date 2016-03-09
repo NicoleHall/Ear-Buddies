@@ -5,7 +5,7 @@ class PlaylistsControllerTest < ActionController::TestCase
     session[:user_id] = users(:one).id
     get :index
     assert_response :success
-    assert_equal ["arts and culture", "hotdogs", "fashion"], Playlist.where(user_id: session[:user_id]).map(&:subject)
+    assert_equal ["arts and culture", "hotdogs", "fashion", "tea"], Playlist.where(user_id: session[:user_id]).map(&:subject)
   end
 
   test "#show action will a playlist" do

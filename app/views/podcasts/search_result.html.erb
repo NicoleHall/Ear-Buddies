@@ -2,7 +2,7 @@
 <div class="container">
   <div class="newbox">
 
-    
+
     <% @results.each do |result| %>
     <div class="card">
       <div class="card-block">
@@ -14,9 +14,9 @@
         <div class="card-block">
 
 
-          <%= link_to "Add To Playlist",
+          <div class="nothinghead"><%= link_to "Add To Playlist",
           new_podcast_path(result),
-          class: "btn btn-primary" %>
+          class: "btn btn-primary" %></div>
 
             <hr>
           </div>

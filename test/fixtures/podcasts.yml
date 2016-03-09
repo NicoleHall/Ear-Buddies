@@ -1,5 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-ne:
+one:
   id: 14
   ep_title: Are Hot Dogs Sandwiches?
   description:  When it comes to the correct definition of a sandwich, I’m a strict constructionist.
