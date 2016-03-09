@@ -8,6 +8,7 @@ ne:
   url: https://www.audiosear.ch/media/64eeb39222985854216d4418983b2a4c/0/public/audio_file/50866/.mp3
   image: https://s3.amazonaws.com/www-prod-popuparchive/the-sporkful.BACjFQ.popuparchive.org/thumb_mza_6297250918464517177.600x600-75.jpg?X-Amz-Expires=604800&X-Amz-Date=20160305T140233Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJ6B3Q7DFQGUS2TXQ/20160305/us-east-1/s3/aws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=651562e8e5f3954d4cab10cf094a9b26ba290039b3f00a3f5748ab5ad88fa23b
   playlist_id: 45
+  audiosearch_id: 8001
 
 two:
   id: 28
@@ -18,3 +19,4 @@ two:
   url: https://www.audiosear.ch/media/4b63d3547ac4ec6c6de3d8458b664fa8/0/public/audio_file/5398/stream.mp3
   image: https://i1.sndcdn.com/artworks-000115308076-2uz5tl-large.jpg
   playlist_id: 45
+  audiosearch_id: 8000
