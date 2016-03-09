@@ -4,7 +4,8 @@ class AudiosearchServiceTest < ActiveSupport::TestCase
 
   test "#initialize" do
     VCR.use_cassette('as_service#initialize') do
-      assert AudiosearchService.new
+      result = AudiosearchService.new
+      assert_equal "https://www.audiosear.ch", result.client.host
     end
   end
 
@@ -21,4 +22,18 @@ class AudiosearchServiceTest < ActiveSupport::TestCase
       assert_equal "food", result.first[:subject]
     end
   end
+
+  test "#search_by_related" do
+    VCR.use_cassette('as_service#search_by_related') do
+      as = AudiosearchService.new
+      result = as.search_by_related("8000")
+      assert_equal 4, result.count
+      assert_equal "E533: Michael Robertson @mp3michael - Founder & CEO, DAR.fm @digitalaudiorec", result.first[:ep_title]
+      assert_equal "2015-04-14", result.first[:date_created_at]
+      assert_equal "This Week In Startups", result.first[:show_title]
+      assert_equal "https://i1.sndcdn.com/avatars-000112553274-ygfl2h-large.jpg", result.first[:image]
+      assert_equal "https://www.audiosear.ch/media/00340b8c6f37f8fda0a2bc3462f6ba09/0/public/audio_file/4791/stream.mp3", result.first[:url]
+    end
+  end
+
 end
