@@ -1,11 +1,11 @@
 class PlaylistsController < ApplicationController
 
   def index
-    if current_user.playlists == []
-      redirect_to new_playlist_path
+    if is_there_a_playlist?
+      @playlists = current_user.playlists
     else
-     @playlists = current_user.playlists
-   end
+      redirect_to new_playlist_path
+    end
   end
 
   def new

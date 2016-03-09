@@ -8,7 +8,8 @@ class PodcastsController < ApplicationController
     @results = AudiosearchService.new.search_by_query(params["podcast_subject"]["subject"])
   end
 
-  def new
+def new
+  if is_there_a_playlist?
     @podcast = Podcast.create_podcast_on_a_playlist(params.merge({
       playlist_id: current_playlist.id}))
     if @podcast.save
@@ -16,7 +17,10 @@ class PodcastsController < ApplicationController
     else
       flash[:notice] = "Fail Whale"
     end
-  end
+  else
+    redirect_to new_playlist_path
+  end     
+end
 
   def show
     @podcast = Podcast.find(params["id"])

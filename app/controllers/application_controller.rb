@@ -12,4 +12,8 @@ class ApplicationController < ActionController::Base
     @playlist = Playlist.find(session[:playlist]["id"]) if session[:playlist]
   end
 
+  def is_there_a_playlist?
+    true unless current_user.playlists == []
+  end
+
 end

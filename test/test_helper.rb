@@ -76,4 +76,9 @@ class ActionDispatch::IntegrationTest
     })
   end
 
+  def give_stubbed_user_a_playlist
+    user = users(:one)
+    Playlist.create(subject: "dogs", user_id: user.id)
+  end
+
 end
