@@ -1,6 +1,8 @@
 class Podcast < ActiveRecord::Base
   belongs_to :playlist
 
+ validates :audiosearch_id, presence: true
+
   def self.create_podcast_on_a_playlist(params)
     podcast = self.new({
       audiosearch_id: params["audiosearch_id"],

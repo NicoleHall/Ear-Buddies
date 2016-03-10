@@ -2,7 +2,7 @@ class PodcastsController < ApplicationController
   before_action :store_query, only:[:search_result]
 
   def search
-   
+
   end
 
   def search_result
@@ -15,7 +15,7 @@ class PodcastsController < ApplicationController
       flash[:notice] = "Create A Playlist!"
       redirect_to new_playlist_path
     else
-      @podcast = Podcast.create_podcast_on_a_playlist(params.merge({
+      @podcast = Podcast.create_podcast_on_a_playlist(params['podcast'].merge({
         playlist_id: current_playlist.id}))
       if @podcast.save
         redirect_to playlist_path(@podcast.playlist)
@@ -27,8 +27,12 @@ class PodcastsController < ApplicationController
   end
 
   def show
-    @podcast = Podcast.find(params["id"])
-    @related = AudiosearchService.new.search_by_related(@podcast.audiosearch_id)
+    begin
+      @podcast = Podcast.find(params["id"]) || nil
+      @related = AudiosearchService.new.search_by_related(@podcast.audiosearch_id)
+    rescue ActiveRecord::RecordNotFound
+      redirect_to podcasts_search_path
+    end
   end
 
   def create

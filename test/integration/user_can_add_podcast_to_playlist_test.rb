@@ -7,7 +7,7 @@ class UserAddAPodcastToAPlaylistTest < ActionDispatch::IntegrationTest
       user = users(:one)
       playlist = playlists(:one)
 
-      assert_equal 2, User.find(1).podcasts.count
+      assert_equal 3, User.find(1).podcasts.count
       result = create_podcast
 
       visit podcasts_search_path
@@ -20,7 +20,7 @@ class UserAddAPodcastToAPlaylistTest < ActionDispatch::IntegrationTest
 
       assert_equal new_podcast_path, current_path
       assert result.save
-      assert_equal 3, User.find(1).podcasts.count
+      assert_equal 4, User.find(1).podcasts.count
     end
   end
 end
